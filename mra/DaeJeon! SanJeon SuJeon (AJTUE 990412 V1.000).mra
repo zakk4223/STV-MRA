@@ -1,0 +1,48 @@
+<misterromdescription>
+	<rbf>Saturn</rbf>
+	<setname>saturnstv</setname>
+	<rom index="2" md5="" zip="stvbios.zip" address="0x30000000">
+		<interleave output="64">
+			<part crc="d1be2adf" name="epr-17952a.ic8" map="21436587" />
+		</interleave>
+	</rom>
+	<rom index="3" md5="" zip="sanjeon.zip|sasissu.zip" address="0x34000000">
+		<interleave output="64">
+			<part crc="9abae8d4" name="ic11" map="12345678" />
+		</interleave>
+		<part repeat="0x200000">00</part>
+		<interleave output="64">
+			<part crc="f72c1d13" name="ic13" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="bcd72105" name="ic14" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="8c9c8352" name="ic15" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="07e11512" name="ic16" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="46b7b344" name="ic17" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="d48404e1" name="ic18" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="33d23bb9" name="ic19" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="f8cc1038" name="ic20" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="74ceb649" name="ic21" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="85f31277" name="ic22" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="d5ebc84e" name="ic12" map="21436587" />
+		</interleave>
+	</rom>
+</misterromdescription>

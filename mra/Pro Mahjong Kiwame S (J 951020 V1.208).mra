@@ -1,0 +1,28 @@
+<misterromdescription>
+	<rbf>Saturn</rbf>
+	<setname>saturnstv</setname>
+	<rom index="2" md5="" zip="stvbios.zip" address="0x30000000">
+		<interleave output="64">
+			<part crc="f688ae60" name="epr-23603.ic8" map="21436587" />
+		</interleave>
+	</rom>
+	<rom index="3" md5="" zip="kiwames.zip" address="0x34000000">
+		<interleave output="64">
+			<part crc="cfad6c49" name="epr18737.13" map="12345678" />
+		</interleave>
+		<part repeat="0x80000">00</part>
+		<interleave output="64">
+			<part crc="cfad6c49" name="epr18737.13" map="12345678" />
+		</interleave>
+		<part repeat="0x27ffff">00</part>
+		<interleave output="64">
+			<part crc="4b3c175a" name="mpr18738.2" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="eb41fa67" name="mpr18739.3" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="9ca7962f" name="mpr18740.4" map="21436587" />
+		</interleave>
+	</rom>
+</misterromdescription>

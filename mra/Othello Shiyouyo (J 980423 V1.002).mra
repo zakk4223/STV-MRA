@@ -1,0 +1,27 @@
+<misterromdescription>
+	<rbf>Saturn</rbf>
+	<setname>saturnstv</setname>
+	<rom index="2" md5="" zip="stvbios.zip" address="0x30000000">
+		<interleave output="64">
+			<part crc="f688ae60" name="epr-23603.ic8" map="21436587" />
+		</interleave>
+	</rom>
+	<rom index="3" md5="" zip="othellos.zip" address="0x34000000">
+		<part repeat="0x200000">00</part>
+		<interleave output="64">
+			<part crc="efc05b97" name="mpr20967.7" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="2cc4f141" name="mpr20963.2" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="5f5cda94" name="mpr20964.3" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="37044f3e" name="mpr20965.4" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="b94b83de" name="mpr20966.5" map="21436587" />
+		</interleave>
+	</rom>
+</misterromdescription>

@@ -1,0 +1,52 @@
+<misterromdescription>
+	<rbf>Saturn</rbf>
+	<setname>saturnstv</setname>
+	<rom index="2" md5="" zip="stvbios.zip" address="0x30000000">
+		<interleave output="64">
+			<part crc="f688ae60" name="epr-23603.ic8" map="21436587" />
+		</interleave>
+	</rom>
+	<rom index="3" md5="" zip="vfremix.zip" address="0x34000000">
+
+
+	<rom index="3" md5="" zip="vfremix.zip" address="0x34000000">
+		<interleave output="64">
+			<part crc="3304c175" name="epr17944.13" map="12345678" />
+		</interleave>
+		<part repeat="0x80000">00</part>
+
+		<interleave output="64">
+			<part crc="3304c175" name="epr17944.13" map="12345678" />
+		</interleave>
+		<part repeat="0x80000">00</part>
+
+		<interleave output="64">
+			<part crc="3304c175" name="epr17944.13" map="12345678" />
+		</interleave>
+		<part repeat="0x80000">00</part>
+
+		<interleave output="64">
+			<part crc="3304c175" name="epr17944.13" map="12345678" />
+		</interleave>
+		<part repeat="0x80000">00</part>
+
+		<interleave output="64">
+			<part crc="4cb245f7" name="mpr17946.2" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="fef4a9fb" name="mpr17947.3" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="3e2b251a" name="mpr17948.4" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="b2ecea25" name="mpr17949.5" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="5b1f981d" name="mpr17950.6" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="03ede188" name="mpr17945.1" map="21436587" />
+		</interleave>
+	</rom>
+</misterromdescription>

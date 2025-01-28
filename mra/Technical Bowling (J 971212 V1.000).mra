@@ -1,0 +1,27 @@
+<misterromdescription>
+	<rbf>Saturn</rbf>
+	<setname>saturnstv</setname>
+	<rom index="2" md5="" zip="stvbios.zip" address="0x30000000">
+		<interleave output="64">
+			<part crc="f688ae60" name="epr-23603.ic8" map="21436587" />
+		</interleave>
+	</rom>
+	<rom index="3" md5="" zip="techbowl.zip" address="0x34000000">
+		<part repeat="0x200000">00</part>
+		<interleave output="64">
+			<part crc="5058db21" name="ic22" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="34090f6d" name="ic24" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="fb073352" name="ic26" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="530e0ceb" name="ic28" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="8d89877e" name="ic30" map="21436587" />
+		</interleave>
+	</rom>
+</misterromdescription>
