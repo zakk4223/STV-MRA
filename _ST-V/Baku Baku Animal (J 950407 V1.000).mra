@@ -1,5 +1,6 @@
 <misterromdescription>
 	<rbf>Saturn</rbf>
+	<name>Baku Baku Animal</name>
 	<setname>saturnstv</setname>
 	<rom index="2" md5="" zip="stvbios.zip" address="0x30000000">
 		<interleave output="64">
