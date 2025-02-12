@@ -9,34 +9,34 @@
 	<rom index="3" md5="" zip="nclubdis.zip" address="0x34000000">
 		<part repeat="0x200000">00</part>
 		<interleave output="64">
-			<part crc="cfd5eb54" name="ic22" map="21436587" />
+			<part crc="cfd5eb54" name="ic22" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="943682eb" name="ic24" map="21436587" />
+			<part crc="943682eb" name="ic24" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="a17bd53a" name="ic26" map="21436587" />
+			<part crc="a17bd53a" name="ic26" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="9a597bff" name="ic28" map="21436587" />
+			<part crc="9a597bff" name="ic28" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="3eb020f6" name="ic30" map="21436587" />
+			<part crc="3eb020f6" name="ic30" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="ac26d375" name="ic32" map="21436587" />
+			<part crc="ac26d375" name="ic32" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="e157cd99" name="ic34" map="21436587" />
+			<part crc="e157cd99" name="ic34" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="9a4109e5" name="ic36" map="21436587" />
+			<part crc="9a4109e5" name="ic36" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="9a4109e5" name="ic23" map="21436587" />
+			<part crc="9a4109e5" name="ic23" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="9a4109e5" name="ic25" map="21436587" />
+			<part crc="9a4109e5" name="ic25" map="12345678" />
 		</interleave>
 	</rom>
 </misterromdescription>

@@ -9,23 +9,23 @@
 	<rom index="3" md5="" zip="thunt.zip|sandor.zip" address="0x34000000">
 		<part repeat="0x200000">00</part>
 		<interleave output="64">
-			<part crc="c4e993de" name="th-ic7_2.stv" map="21436587" />
+			<part crc="c4e993de" name="th-ic7_2.stv" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="1355cc18" name="th-ic7_1.stv" map="12345678" />
+			<part crc="1355cc18" name="th-ic7_1.stv" map="21436587" />
 		</interleave>
 		<part repeat="0x100000">00</part>
 		<interleave output="64">
-			<part crc="47315694" name="th-e-2.ic2" map="21436587" />
+			<part crc="47315694" name="th-e-2.ic2" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="c9290b44" name="th-e-3.ic3" map="21436587" />
+			<part crc="c9290b44" name="th-e-3.ic3" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="c672e40b" name="th-e-4.ic4" map="21436587" />
+			<part crc="c672e40b" name="th-e-4.ic4" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="3914b805" name="th-e-5.ic5" map="21436587" />
+			<part crc="3914b805" name="th-e-5.ic5" map="12345678" />
 		</interleave>
 	</rom>
 </misterromdescription>

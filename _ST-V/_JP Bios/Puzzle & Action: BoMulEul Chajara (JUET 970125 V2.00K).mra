@@ -9,35 +9,35 @@
 	<rom index="3" md5="" zip="thuntk.zip|sandor.zip" address="0x34000000">
 		<part repeat="0x200000">00</part>
 		<interleave output="64">
-			<part crc="6cae2926" name="2.ic13_2" map="21436587" />
+			<part crc="6cae2926" name="2.ic13_2" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="460727c8" name="1.ic13_1" map="12345678" />
+			<part crc="460727c8" name="1.ic13_1" map="21436587" />
 		</interleave>
 		<part repeat="0x1900000">00</part>
 		<interleave output="64">
-			<part crc="f59d0827" name="bom210-10.ic2" map="12345678" />
+			<part crc="f59d0827" name="bom210-10.ic2" map="21436587" />
 		</interleave>
 		<interleave output="64">
-			<part crc="f59d0827" name="bom210-10.ic2" map="12345678" />
+			<part crc="f59d0827" name="bom210-10.ic2" map="21436587" />
 		</interleave>
 		<interleave output="64">
-			<part crc="44e5a13e" name="bom210-11.ic3" map="12345678" />
+			<part crc="44e5a13e" name="bom210-11.ic3" map="21436587" />
 		</interleave>
 		<interleave output="64">
-			<part crc="44e5a13e" name="bom210-11.ic3" map="12345678" />
+			<part crc="44e5a13e" name="bom210-11.ic3" map="21436587" />
 		</interleave>
 		<interleave output="64">
-			<part crc="deabc701" name="bom210-12.ic4" map="12345678" />
+			<part crc="deabc701" name="bom210-12.ic4" map="21436587" />
 		</interleave>
 		<interleave output="64">
-			<part crc="deabc701" name="bom210-12.ic4" map="12345678" />
+			<part crc="deabc701" name="bom210-12.ic4" map="21436587" />
 		</interleave>
 		<interleave output="64">
-			<part crc="5ece1d5c" name="bom210-13.ic5" map="12345678" />
+			<part crc="5ece1d5c" name="bom210-13.ic5" map="21436587" />
 		</interleave>
 		<interleave output="64">
-			<part crc="5ece1d5c" name="bom210-13.ic5" map="12345678" />
+			<part crc="5ece1d5c" name="bom210-13.ic5" map="21436587" />
 		</interleave>
 	</rom>
 </misterromdescription>

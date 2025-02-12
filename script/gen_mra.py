@@ -60,7 +60,7 @@ def create_mra_tree(gameinfo, for_region="US"):
     current_offset = 0
     for rominfo in gameinfo.iter('rom'):
         rom_offset = int(rominfo.attrib['offset'],0)
-        if rom_offset == 1: rom_offset = 0
+        rom_offset = rom_offset & ~1
         if rom_offset > current_offset:
             add_zero_bytes(rom_root, length=rom_offset - current_offset)
             current_offset = current_offset + (rom_offset - current_offset)
@@ -69,7 +69,12 @@ def create_mra_tree(gameinfo, for_region="US"):
             print(descnode.text)
         if 'name' in rominfo.attrib:
             rom_size = int(rominfo.attrib['size'],0)
-            add_rom_part(rom_root, crc=rominfo.attrib['crc'], name=rominfo.attrib['name'], byteswap='loadflag' in rominfo.attrib and rominfo.attrib['loadflag'] == 'load16_word_swap')
+            do_byteswap = True 
+            if 'loadflag' in rominfo.attrib and rominfo.attrib['loadflag'] == 'load16_word_swap':
+                do_byteswap = False
+            if current_offset < 0x200000:
+                do_byteswap = not do_byteswap
+            add_rom_part(rom_root, crc=rominfo.attrib['crc'], name=rominfo.attrib['name'], byteswap=do_byteswap)
             last_loaded_rom_node = rominfo
             current_offset = current_offset + rom_size
 

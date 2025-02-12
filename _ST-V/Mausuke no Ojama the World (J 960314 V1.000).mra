@@ -14,31 +14,31 @@
 		<part repeat="0x100000">00</part>
 		<part repeat="0x100000">00</part>
 		<interleave output="64">
-			<part crc="4eeacd6f" name="mcj-00.2" map="21436587" />
+			<part crc="4eeacd6f" name="mcj-00.2" map="12345678" />
 		</interleave>
 		<part repeat="0x200000">00</part>
 		<interleave output="64">
-			<part crc="365a494b" name="mcj-01.3" map="21436587" />
+			<part crc="365a494b" name="mcj-01.3" map="12345678" />
 		</interleave>
 		<part repeat="0x200000">00</part>
 		<interleave output="64">
-			<part crc="8b8e4931" name="mcj-02.4" map="21436587" />
+			<part crc="8b8e4931" name="mcj-02.4" map="12345678" />
 		</interleave>
 		<part repeat="0x200000">00</part>
 		<interleave output="64">
-			<part crc="9015a0e7" name="mcj-03.5" map="21436587" />
+			<part crc="9015a0e7" name="mcj-03.5" map="12345678" />
 		</interleave>
 		<part repeat="0x200000">00</part>
 		<interleave output="64">
-			<part crc="9d1beaee" name="mcj-04.6" map="21436587" />
+			<part crc="9d1beaee" name="mcj-04.6" map="12345678" />
 		</interleave>
 		<part repeat="0x200000">00</part>
 		<interleave output="64">
-			<part crc="a7626a82" name="mcj-05.1" map="21436587" />
+			<part crc="a7626a82" name="mcj-05.1" map="12345678" />
 		</interleave>
 		<part repeat="0x200000">00</part>
 		<interleave output="64">
-			<part crc="1ab8e90e" name="mcj-06.8" map="21436587" />
+			<part crc="1ab8e90e" name="mcj-06.8" map="12345678" />
 		</interleave>
 	</rom>
 </misterromdescription>

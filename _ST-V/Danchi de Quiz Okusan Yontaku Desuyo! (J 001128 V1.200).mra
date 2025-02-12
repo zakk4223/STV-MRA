@@ -9,34 +9,34 @@
 	<rom index="3" md5="" zip="danchiq.zip" address="0x34000000">
 		<part repeat="0x200000">00</part>
 		<interleave output="64">
-			<part crc="e216bfc8" name="ic22" map="21436587" />
+			<part crc="e216bfc8" name="ic22" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="b95aa5ac" name="ic24" map="21436587" />
+			<part crc="b95aa5ac" name="ic24" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="df6ebd48" name="ic26" map="21436587" />
+			<part crc="df6ebd48" name="ic26" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="cf6a2b76" name="ic28" map="21436587" />
+			<part crc="cf6a2b76" name="ic28" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="0b6a9901" name="ic30" map="21436587" />
+			<part crc="0b6a9901" name="ic30" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="0b4604f5" name="ic32" map="21436587" />
+			<part crc="0b4604f5" name="ic32" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="616e20fa" name="ic34" map="21436587" />
+			<part crc="616e20fa" name="ic34" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="43474e08" name="ic36" map="21436587" />
+			<part crc="43474e08" name="ic36" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="d080eb71" name="ic23" map="21436587" />
+			<part crc="d080eb71" name="ic23" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="9a4109e5" name="ic25" map="21436587" />
+			<part crc="9a4109e5" name="ic25" map="12345678" />
 		</interleave>
 	</rom>
 </misterromdescription>

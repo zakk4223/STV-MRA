@@ -9,19 +9,19 @@
 	<rom index="3" md5="" zip="prikura.zip" address="0x34000000">
 		<part repeat="0x200000">00</part>
 		<interleave output="64">
-			<part crc="76f69ff3" name="mpr19337.7" map="21436587" />
+			<part crc="76f69ff3" name="mpr19337.7" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="eb57a6a6" name="mpr19333.2" map="21436587" />
+			<part crc="eb57a6a6" name="mpr19333.2" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="c9979981" name="mpr19334.3" map="21436587" />
+			<part crc="c9979981" name="mpr19334.3" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="9e000140" name="mpr19335.4" map="21436587" />
+			<part crc="9e000140" name="mpr19335.4" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="2363fa4b" name="mpr19336.5" map="21436587" />
+			<part crc="2363fa4b" name="mpr19336.5" map="12345678" />
 		</interleave>
 	</rom>
 </misterromdescription>

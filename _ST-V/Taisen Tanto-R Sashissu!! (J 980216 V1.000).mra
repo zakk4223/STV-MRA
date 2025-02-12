@@ -12,22 +12,22 @@
 		</interleave>
 		<part repeat="0x300000">00</part>
 		<interleave output="64">
-			<part crc="661fff5e" name="mpr20544.2" map="21436587" />
+			<part crc="661fff5e" name="mpr20544.2" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="8e3a37be" name="mpr20545.3" map="21436587" />
+			<part crc="8e3a37be" name="mpr20545.3" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="72020886" name="mpr20546.4" map="21436587" />
+			<part crc="72020886" name="mpr20546.4" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="8362e397" name="mpr20547.5" map="21436587" />
+			<part crc="8362e397" name="mpr20547.5" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="e37534d9" name="mpr20548.6" map="21436587" />
+			<part crc="e37534d9" name="mpr20548.6" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="1f688cdf" name="mpr20543.1" map="21436587" />
+			<part crc="1f688cdf" name="mpr20543.1" map="12345678" />
 		</interleave>
 	</rom>
 </misterromdescription>

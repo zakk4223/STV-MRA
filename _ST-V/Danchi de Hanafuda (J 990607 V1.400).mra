@@ -9,19 +9,19 @@
 	<rom index="3" md5="" zip="danchih.zip" address="0x34000000">
 		<part repeat="0x200000">00</part>
 		<interleave output="64">
-			<part crc="e7472793" name="mpr21974.7" map="21436587" />
+			<part crc="e7472793" name="mpr21974.7" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="34dd7f4d" name="mpr21970.2" map="21436587" />
+			<part crc="34dd7f4d" name="mpr21970.2" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="8995158c" name="mpr21971.3" map="21436587" />
+			<part crc="8995158c" name="mpr21971.3" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="68a39090" name="mpr21972.4" map="21436587" />
+			<part crc="68a39090" name="mpr21972.4" map="12345678" />
 		</interleave>
 		<interleave output="64">
-			<part crc="b0f23f14" name="mpr21973.5" map="21436587" />
+			<part crc="b0f23f14" name="mpr21973.5" map="12345678" />
 		</interleave>
 	</rom>
 </misterromdescription>
