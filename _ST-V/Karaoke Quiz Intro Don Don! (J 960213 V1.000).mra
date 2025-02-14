@@ -1,6 +1,7 @@
 <misterromdescription>
 	<rbf>Saturn</rbf>
-	<setname>saturnstv</setname>
+	<name>Karaoke Quiz Intro Don Don!</name>
+	<setname>introdon</setname>
 	<rom index="2" md5="" zip="stvbios.zip" address="0x30000000">
 		<interleave output="64">
 			<part crc="f688ae60" name="epr-23603.ic8" map="21436587" />

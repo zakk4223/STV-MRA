@@ -1,6 +1,7 @@
 <misterromdescription>
 	<rbf>Saturn</rbf>
-	<setname>saturnstv</setname>
+	<name>Batman Forever</name>
+	<setname>batmanfr</setname>
 	<rom index="2" md5="" zip="stvbios.zip" address="0x30000000">
 		<interleave output="64">
 			<part crc="d1be2adf" name="epr-17952a.ic8" map="21436587" />
