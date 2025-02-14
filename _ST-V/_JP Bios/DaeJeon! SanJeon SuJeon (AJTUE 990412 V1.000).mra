@@ -8,9 +8,8 @@
 	</rom>
 	<rom index="3" md5="" zip="sanjeon.zip|sasissu.zip" address="0x34000000">
 		<interleave output="64">
-			<part crc="9abae8d4" name="ic11" map="12345678" />
+			<part crc="9abae8d4" name="ic11" map="01030507" />
 		</interleave>
-		<part repeat="0x200000">00</part>
 		<interleave output="64">
 			<part crc="f72c1d13" name="ic13" map="12345678" />
 		</interleave>

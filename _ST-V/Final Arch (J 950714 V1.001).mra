@@ -8,15 +8,13 @@
 	</rom>
 	<rom index="3" md5="" zip="finlarch.zip|smleague.zip" address="0x34000000">
 		<interleave output="64">
-			<part crc="4505fa9e" name="finlarch.13" map="12345678" />
+			<part crc="4505fa9e" name="finlarch.13" map="01030507" />
 		</interleave>
-		<part repeat="0x100000">00</part>
 		<part repeat="0x100000">00</part>
 		<part repeat="0x100000">00</part>
 		<interleave output="64">
 			<part crc="137fdf55" name="mpr18257.2" map="12345678" />
 		</interleave>
-		<part repeat="0xc00000">00</part>
 		<interleave output="64">
 			<part crc="137fdf55" name="mpr18257.2" map="12345678" />
 		</interleave>

@@ -8,9 +8,9 @@
 	</rom>
 	<rom index="3" md5="" zip="vfkids.zip" address="0x34000000">
 		<interleave output="64">
-			<part crc="cd35730a" name="fpr18914.13" map="12345678" />
+			<part crc="cd35730a" name="fpr18914.13" map="01030507" />
 		</interleave>
-		<part repeat="0xb00000">00</part>
+		<part repeat="0xa00000">00</part>
 		<interleave output="64">
 			<part crc="4aae3ddb" name="mpr18916.4" map="12345678" />
 		</interleave>

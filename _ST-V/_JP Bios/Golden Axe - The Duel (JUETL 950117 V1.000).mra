@@ -8,13 +8,12 @@
 	</rom>
 	<rom index="3" md5="" zip="gaxeduel.zip" address="0x34000000">
 		<interleave output="64">
-			<part crc="a83fcd62" name="epr17766.13" map="12345678" />
+			<part crc="a83fcd62" name="epr17766.13" map="01030507" />
 		</interleave>
-		<part repeat="0x80000">00</part>
 		<interleave output="64">
-			<part crc="a83fcd62" name="epr17766.13" map="12345678" />
+			<part crc="a83fcd62" name="epr17766.13" map="01030507" />
 		</interleave>
-		<part repeat="0x280000">00</part>
+		<part repeat="0x200000">00</part>
 		<interleave output="64">
 			<part crc="d6808a7d" name="mpr17768.2" map="12345678" />
 		</interleave>

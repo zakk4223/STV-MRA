@@ -8,9 +8,9 @@
 	</rom>
 	<rom index="3" md5="" zip="decathlto.zip|decathlt.zip" address="0x34000000">
 		<interleave output="64">
-			<part crc="c0446674" name="epr18967.13" map="12345678" />
+			<part crc="c0446674" name="epr18967.13" map="01030507" />
 		</interleave>
-		<part repeat="0x300000">00</part>
+		<part repeat="0x200000">00</part>
 		<interleave output="64">
 			<part crc="11a891de" name="mpr18968.2" map="12345678" />
 		</interleave>

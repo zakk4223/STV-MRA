@@ -8,9 +8,9 @@
 	</rom>
 	<rom index="3" md5="" zip="dnmtdeka.zip|diehard.zip" address="0x34000000">
 		<interleave output="64">
-			<part crc="1fd22a5f" name="fpr19114.13" map="12345678" />
+			<part crc="1fd22a5f" name="fpr19114.13" map="01030507" />
 		</interleave>
-		<part repeat="0x300000">00</part>
+		<part repeat="0x200000">00</part>
 		<interleave output="64">
 			<part crc="6fe06a30" name="mpr19115.2" map="12345678" />
 		</interleave>

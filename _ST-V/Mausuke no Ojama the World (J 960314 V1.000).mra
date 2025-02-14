@@ -8,9 +8,8 @@
 	</rom>
 	<rom index="3" md5="" zip="mausuke.zip" address="0x34000000">
 		<interleave output="64">
-			<part crc="b456f4cd" name="ic13.bin" map="12345678" />
+			<part crc="b456f4cd" name="ic13.bin" map="01030507" />
 		</interleave>
-		<part repeat="0x100000">00</part>
 		<part repeat="0x100000">00</part>
 		<part repeat="0x100000">00</part>
 		<interleave output="64">

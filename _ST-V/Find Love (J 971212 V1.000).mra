@@ -8,9 +8,8 @@
 	</rom>
 	<rom index="3" md5="" zip="findlove.zip" address="0x34000000">
 		<interleave output="64">
-			<part crc="4e61fa46" name="epr20424.13" map="12345678" />
+			<part crc="4e61fa46" name="epr20424.13" map="01030507" />
 		</interleave>
-		<part repeat="0x100000">00</part>
 		<interleave output="64">
 			<part crc="ea656ced" name="mpr20431.7" map="12345678" />
 		</interleave>

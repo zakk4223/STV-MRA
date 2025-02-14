@@ -8,9 +8,9 @@
 	</rom>
 	<rom index="3" md5="" zip="sandor.zip" address="0x34000000">
 		<interleave output="64">
-			<part crc="fe63a239" name="sando-r.13" map="12345678" />
+			<part crc="fe63a239" name="sando-r.13" map="01030507" />
 		</interleave>
-		<part repeat="0x1b00000">00</part>
+		<part repeat="0x1a00000">00</part>
 		<interleave output="64">
 			<part crc="441e1368" name="mpr18635.8" map="12345678" />
 		</interleave>
