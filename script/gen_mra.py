@@ -12,10 +12,17 @@ from pathlib import Path
 
 
 mame_stvhash_file = sys.argv[1]
+mame_xmlinfo_file = sys.argv[2]
+
 
 
 hashtree = ET.parse(mame_stvhash_file)
 hashroot = hashtree.getroot()
+
+
+mamexmltree = ET.parse(mame_xmlinfo_file)
+mameroot = mamexmltree.getroot()
+
 
 
 def add_rom_part(romroot, crc, name, length=None, byteswap=False, skip_byte=False):
@@ -47,16 +54,32 @@ def create_mra_root():
     ET.SubElement(mraroot, "setname").text = "saturnstv"
     return mraroot
 
+def add_eeprom(mraroot, gamename, zip_files):
+    global mameroot
+    mame_nvs = mameroot.find(f"machine[@name='{gamename}']/rom[@region='eeprom']")
+    eeprom_elem = add_rom(mraroot, romindex="1", zipfiles=zip_files, address="0x32000000")
+    if mame_nvs is not None:
+        add_rom_part(eeprom_elem, crc=mame_nvs.attrib['crc'], name=mame_nvs.attrib['name'])
+    else:
+        add_zero_bytes(eeprom_elem, 128)
+    return eeprom_elem
+
+
+
+
+
+
+
 
 
 def create_mra_tree(gameinfo, for_region="US"):
     mraroot = create_mra_root()
-    add_bios(mraroot, region=for_region)
     zip_names = []
     zip_names.append(f'{gameinfo.attrib['name']}.zip')
     if 'cloneof' in gameinfo.attrib:
         zip_names.append(f'{gameinfo.attrib['cloneof']}.zip')
-
+    add_eeprom(mraroot, gamename=gameinfo.attrib['name'], zip_files=zip_names)
+    add_bios(mraroot, region=for_region)
     rom_root = add_rom(mraroot, romindex="3", zipfiles=zip_names, address="0x34000000")
     mra_filename = f'{descnode.text}.mra'
     mra_filename = mra_filename.replace('/', '-')
