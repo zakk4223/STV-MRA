@@ -13,8 +13,12 @@
 		<interleave output="64">
 			<part crc="b456f4cd" name="ic13.bin" map="01030507" />
 		</interleave>
-		<part repeat="0x100000">00</part>
-		<part repeat="0x100000">00</part>
+		<interleave output="64">
+			<part crc="b456f4cd" name="ic13.bin" map="21436587" />
+		</interleave>
+		<interleave output="64">
+			<part crc="b456f4cd" name="ic13.bin" map="21436587" />
+		</interleave>
 		<interleave output="64">
 			<part crc="4eeacd6f" name="mcj-00.2" map="12345678" />
 		</interleave>

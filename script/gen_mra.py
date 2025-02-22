@@ -7,6 +7,7 @@ import os
 import re
 import xml.etree.ElementTree as ET 
 from pathlib import Path
+from copy import deepcopy
 
 
 
@@ -25,12 +26,21 @@ mameroot = mamexmltree.getroot()
 
 
 
-def add_rom_part(romroot, crc, name, length=None, byteswap=False, skip_byte=False):
-    inter_elem = ET.SubElement(romroot, "interleave", output="64")
+def add_rom_part(romroot, crc, name, length=None, byteswap=False, skip_byte=False, do_inter=True, skip_shift=False):
+    inter_elem = None
+    if do_inter:
+        inter_elem = ET.SubElement(romroot, "interleave", output="64")
+    else:
+        inter_elem = romroot
     byte_map = "21436587" if byteswap else "12345678"
     if skip_byte:
-        byte_map = "01030507" if byteswap else "02040608"
+        if skip_shift: 
+            byte_map = "10305070" if byteswap else "20406080"
+        else:
+            byte_map = "01030507" if byteswap else "02040608"
+
     ET.SubElement(inter_elem, "part", crc=crc, name=name, map=byte_map)
+    return inter_elem
 
 def add_rom(mraroot, romindex, zipfiles, address):
     rom_elem = ET.SubElement(mraroot, "rom", index=romindex, md5="", zip="|".join(zipfiles), address=address)
@@ -86,37 +96,56 @@ def create_mra_tree(gameinfo, for_region="US"):
 
     last_loaded_rom_node = None
     current_offset = 0
+
+    offset_map = {}
+
     for rominfo in gameinfo.iter('rom'):
-        #HEY YOU IN THE FUTURE:
-        #_almost_ every game that has load16_byte flags also has an offset like x000001
-        #this means it writes every other byte into the region, but starts at byte 1
-        #00 xx before byte/word etc swap.
-        #a few games are more complicated than this, since you can use this to interleave two roms
-        #via offsets of 0x000000 and then 0x000001
-        #it might be worth detecting this at some point but for now just set a flag and then 2x the size
-        #since we'll be writing 00xx
-        #notable game that might need hand fixing: batman
+        rom_offset = int(rominfo.attrib['offset'],0)
         if 'loadflag' in rominfo.attrib and rominfo.attrib['loadflag'] == 'reload' and last_loaded_rom_node is not None:
             rominfo = last_loaded_rom_node
-            print(descnode.text)
+        if 'loadflag' in rominfo.attrib and rominfo.attrib['loadflag'] == 'reload_plain' and last_loaded_rom_node is not None:
+            rominfo = last_loaded_rom_node
+            if 'loadflag' in rominfo.attrib:
+                del rominfo.attrib['loadflag']
+        #batman has sound roms in the stv.xml, without designating a sound cpu region. Just skip anything with 'snd' in it 
+        if 'snd' not in rominfo.attrib['name'] and 'eeprom' not in rominfo.attrib['name']:
+            offset_map[rom_offset] = deepcopy(rominfo)  
+            last_loaded_rom_node = rominfo
+    rom_inter_node = None
+    for rom_offset,rominfo in sorted(offset_map.items()):
+        rom_do_interleave = False
+        rom_int_offset = rom_offset + 1
+        if rom_int_offset in offset_map:
+            rom_do_interleave = True
+            #interleaved program roms
+
         rom_byte_skip = False
         if 'loadflag' in rominfo.attrib and rominfo.attrib['loadflag'] == 'load16_byte': rom_byte_skip = True
-        rom_offset = int(rominfo.attrib['offset'],0)
         rom_offset = rom_offset & ~1
         if rom_offset > current_offset:
             add_zero_bytes(rom_root, length=rom_offset - current_offset)
             current_offset = current_offset + (rom_offset - current_offset)
         if 'name' in rominfo.attrib:
             rom_size = int(rominfo.attrib['size'],0)
-            if rom_byte_skip: rom_size = rom_size * 2
+            if rom_byte_skip and not rom_do_interleave: rom_size = rom_size * 2
             do_byteswap = True 
             if 'loadflag' in rominfo.attrib and rominfo.attrib['loadflag'] == 'load16_word_swap':
                 do_byteswap = False
+                if rom_do_interleave:
+                    rom_byte_skip = True
             if 'loadflag' in rominfo.attrib and rominfo.attrib['loadflag'] == 'load16_byte':
                 do_byteswap = False
             if current_offset < 0x200000:
                 do_byteswap = not do_byteswap
-            add_rom_part(rom_root, length=rom_size, crc=rominfo.attrib['crc'], name=rominfo.attrib['name'], byteswap=do_byteswap, skip_byte=rom_byte_skip)
+            if rom_inter_node is not None or rom_do_interleave:
+                do_byteswap = True
+            if rom_inter_node is not None:
+                add_rom_part(rom_inter_node, length=rom_size, crc=rominfo.attrib['crc'], name=rominfo.attrib['name'], byteswap=do_byteswap, skip_byte=True, skip_shift=True, do_inter=False)
+                rom_inter_node = None 
+            else:
+                inter_node = add_rom_part(rom_root, length=rom_size, crc=rominfo.attrib['crc'], name=rominfo.attrib['name'], byteswap=do_byteswap, skip_byte=rom_byte_skip, skip_shift=False)
+            if rom_do_interleave:
+                rom_inter_node = inter_node
             last_loaded_rom_node = rominfo
             current_offset = current_offset + rom_size
 
@@ -134,6 +163,7 @@ for gameinfo in hashroot.iter('software'):
 
     mra_filename = f'{descnode.text}.mra'
     mra_filename = mra_filename.replace('/', '-')
+    mra_filename = mra_filename.replace(':', '-')
     
     if region_codes == 'J':
         create_mra_tree(gameinfo, for_region="JP").write(mra_filename)

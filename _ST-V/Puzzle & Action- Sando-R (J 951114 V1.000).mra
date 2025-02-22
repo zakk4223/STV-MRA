@@ -13,27 +13,28 @@
 		<interleave output="64">
 			<part crc="fe63a239" name="sando-r.13" map="01030507" />
 		</interleave>
-		<part repeat="0x1a00000">00</part>
-		<interleave output="64">
-			<part crc="441e1368" name="mpr18635.8" map="12345678" />
-		</interleave>
+		<part repeat="0x200000">00</part>
 		<interleave output="64">
 			<part crc="441e1368" name="mpr18635.8" map="12345678" />
 		</interleave>
 		<interleave output="64">
 			<part crc="fff1dd80" name="mpr18636.9" map="12345678" />
-		</interleave>
-		<interleave output="64">
-			<part crc="fff1dd80" name="mpr18636.9" map="12345678" />
-		</interleave>
-		<interleave output="64">
-			<part crc="83aced0f" name="mpr18637.10" map="12345678" />
 		</interleave>
 		<interleave output="64">
 			<part crc="83aced0f" name="mpr18637.10" map="12345678" />
 		</interleave>
 		<interleave output="64">
 			<part crc="caab531b" name="mpr18638.11" map="12345678" />
+		</interleave>
+		<part repeat="0x800000">00</part>
+		<interleave output="64">
+			<part crc="441e1368" name="mpr18635.8" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="fff1dd80" name="mpr18636.9" map="12345678" />
+		</interleave>
+		<interleave output="64">
+			<part crc="83aced0f" name="mpr18637.10" map="12345678" />
 		</interleave>
 		<interleave output="64">
 			<part crc="caab531b" name="mpr18638.11" map="12345678" />

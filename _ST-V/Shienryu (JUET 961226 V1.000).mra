@@ -22,8 +22,5 @@
 		<interleave output="64">
 			<part crc="e2f0b037" name="mpr19633.3" map="12345678" />
 		</interleave>
-		<interleave output="64">
-			<part crc="98db6925" name="eeprom-shienryu.bin" map="12345678" />
-		</interleave>
 	</rom>
 </misterromdescription>
