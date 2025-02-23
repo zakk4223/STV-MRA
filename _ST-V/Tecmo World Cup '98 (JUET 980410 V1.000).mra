@@ -13,12 +13,7 @@
 		<interleave output="64">
 			<part crc="d930dfc8" name="epr20819.13" map="01030507" />
 		</interleave>
-		<interleave output="64">
-			<part crc="d930dfc8" name="epr20819.13" map="21436587" />
-		</interleave>
-		<interleave output="64">
-			<part crc="d930dfc8" name="epr20819.13" map="21436587" />
-		</interleave>
+		<part repeat="0x200000">00</part>
 		<interleave output="64">
 			<part crc="2d930d23" name="mpr20821.2" map="12345678" />
 		</interleave>
