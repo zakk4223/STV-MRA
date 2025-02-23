@@ -127,7 +127,7 @@ def create_mra_tree(gameinfo, for_region="US"):
             current_offset = current_offset + (rom_offset - current_offset)
         if 'name' in rominfo.attrib:
             rom_size = int(rominfo.attrib['size'],0)
-            if rom_byte_skip and not rom_do_interleave: rom_size = rom_size * 2
+            if rom_byte_skip and not rom_do_interleave and rom_inter_node is None: rom_size = rom_size * 2
             do_byteswap = True 
             if 'loadflag' in rominfo.attrib and rominfo.attrib['loadflag'] == 'load16_word_swap':
                 do_byteswap = False
