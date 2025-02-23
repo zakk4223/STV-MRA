@@ -1,7 +1,7 @@
 <misterromdescription>
 	<rbf>Saturn</rbf>
 	<setname>saturnstv</setname>
-	<rom index="1" md5="" zip="twcup98.zip" address="0x32000000">
+	<rom index="1" md5="" zip="twsoc98.zip|twcup98.zip" address="0x32000000">
 		<part repeat="0x80">00</part>
 	</rom>
 	<rom index="2" md5="" zip="stvbios.zip" address="0x30000000">
@@ -9,9 +9,9 @@
 			<part crc="f688ae60" name="epr-23603.ic8" map="21436587" />
 		</interleave>
 	</rom>
-	<rom index="3" md5="" zip="twcup98.zip" address="0x34000000">
+	<rom index="3" md5="" zip="twsoc98.zip|twcup98.zip" address="0x34000000">
 		<interleave output="64">
-			<part crc="d930dfc8" name="epr20819.13" map="01030507" />
+			<part crc="b10451f9" name="epr-20820.ic24" map="01030507" />
 		</interleave>
 		<part repeat="0x200000">00</part>
 		<interleave output="64">

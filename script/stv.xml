@@ -1040,10 +1040,26 @@ license:CC0-1.0
 		<part name="cart" interface="stv_cart">
 			<dataarea name="rom" size="0x3000000">
 				<rom name="epr20819.13" size="0x100000" crc="d930dfc8" sha1="f66cc955181720661a0334fe67fa5750ddf9758b" offset="0x000001" loadflag="load16_byte"/>
-				<rom name="mpr20821.2" size="0x400000" crc="2d930d23" sha1="5fcaf4257f3639cb3aa407d2936f616499a09d97" offset="0x400000" loadflag="load16_word_swap"/>
-				<rom name="mpr20822.3" size="0x400000" crc="8b33a5e2" sha1="d5689ac8aad63509febe9aa4077351be09b2d8d4" offset="0x800000" loadflag="load16_word_swap"/>
-				<rom name="mpr20823.4" size="0x400000" crc="6e6d4e95" sha1="c387d03ba27580c62ac0bf780915fdf41552df6f" offset="0xc00000" loadflag="load16_word_swap"/>
-				<rom name="mpr20824.5" size="0x400000" crc="4cf18a25" sha1="310961a5f114fea8938a3f514dffd5231e910a5a" offset="0x1000000" loadflag="load16_word_swap"/>
+				<rom name="mpr20821.12" size="0x400000" crc="2d930d23" sha1="5fcaf4257f3639cb3aa407d2936f616499a09d97" offset="0x400000" loadflag="load16_word_swap"/>
+				<rom name="mpr20822.13" size="0x400000" crc="8b33a5e2" sha1="d5689ac8aad63509febe9aa4077351be09b2d8d4" offset="0x800000" loadflag="load16_word_swap"/>
+				<rom name="mpr20823.14" size="0x400000" crc="6e6d4e95" sha1="c387d03ba27580c62ac0bf780915fdf41552df6f" offset="0xc00000" loadflag="load16_word_swap"/>
+				<rom name="mpr20824.15" size="0x400000" crc="4cf18a25" sha1="310961a5f114fea8938a3f514dffd5231e910a5a" offset="0x1000000" loadflag="load16_word_swap"/>
+			</dataarea>
+		</part>
+	</software>
+
+	<!-- Game: Tecmo World Cup '98 -->
+	<software name="twsoc98" cloneof="twcup98" supported="no">
+    <description>Tecmo World Soccer '98 (JUET 980410 V1.000)</description>
+		<year>1998</year>
+		<publisher>Tecmo</publisher>
+		<part name="cart" interface="stv_cart">
+			<dataarea name="rom" size="0x3000000">
+				<rom name="epr-20820.ic24" size="0x100000" crc="b10451f9" sha1="180b5071eaa5d6e9903da3fe4845ee2b6a93ef22" offset="0x000001" loadflag="load16_byte"/>
+				<rom name="mpr20821.12" size="0x400000" crc="2d930d23" sha1="5fcaf4257f3639cb3aa407d2936f616499a09d97" offset="0x400000" loadflag="load16_word_swap"/>
+				<rom name="mpr20822.13" size="0x400000" crc="8b33a5e2" sha1="d5689ac8aad63509febe9aa4077351be09b2d8d4" offset="0x800000" loadflag="load16_word_swap"/>
+				<rom name="mpr20823.14" size="0x400000" crc="6e6d4e95" sha1="c387d03ba27580c62ac0bf780915fdf41552df6f" offset="0xc00000" loadflag="load16_word_swap"/>
+				<rom name="mpr20824.15" size="0x400000" crc="4cf18a25" sha1="310961a5f114fea8938a3f514dffd5231e910a5a" offset="0x1000000" loadflag="load16_word_swap"/>
 			</dataarea>
 		</part>
 	</software>
