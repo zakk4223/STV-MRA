@@ -15,7 +15,7 @@
 			<part crc="c4e993de" name="th-ic7_2.stv" map="01030507" />
 			<part crc="1355cc18" name="th-ic7_1.stv" map="10305070" />
 		</interleave>
-		<part repeat="0x80000">00</part>
+		<part repeat="0x100000">00</part>
 		<interleave output="64">
 			<part crc="47315694" name="th-e-2.ic2" map="12345678" />
 		</interleave>
