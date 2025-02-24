@@ -1,6 +1,7 @@
 <misterromdescription>
-	<rbf>Saturn</rbf>
-	<setname>saturnstv</setname>
+	<rbf>ST-V</rbf>
+	<setname>critcrsh</setname>
+	<buttons names="-,-,-,Start,Service,-,-,-,Test,Coin" />
 	<rom index="1" md5="" zip="critcrsh.zip" address="0x32000000">
 		<interleave output="64">
 			<part crc="3da9860e" name="critcrsh.nv" map="12345678" />

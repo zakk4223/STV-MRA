@@ -1,6 +1,7 @@
 <misterromdescription>
-	<rbf>Saturn</rbf>
-	<setname>saturnstv</setname>
+	<rbf>ST-V</rbf>
+	<setname>techbowl</setname>
+	<buttons names="Button 1,Button 2,Button 3,Start,Service,Button 4,-,-,Test,Coin" />
 	<rom index="1" md5="" zip="techbowl.zip" address="0x32000000">
 		<interleave output="64">
 			<part crc="5bebc2b7" name="techbowl.nv" map="12345678" />

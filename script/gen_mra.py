@@ -51,6 +51,17 @@ def add_zero_bytes(romroot, length):
     zelem.text = "00"
     return zelem
 
+def add_buttons(mraroot, button_count=3):
+    button_names = ["-", "-", "-", "Start", "Service", "-", "-",
+                    "-", "Test", "Coin"]
+
+    for btn_idx in range(min(6,button_count)):
+        real_idx = btn_idx if btn_idx < 3 else btn_idx+2
+        button_names[real_idx] = f'Button {btn_idx+1}'
+
+    ET.SubElement(mraroot, "buttons", names=",".join(button_names))
+
+
 def add_bios(mraroot, region="US"):
     bios_elem = add_rom(mraroot, romindex="2", zipfiles=["stvbios.zip"], address="0x30000000")
     if region == "JP":
@@ -58,10 +69,11 @@ def add_bios(mraroot, region="US"):
     else:
         add_rom_part(bios_elem, crc="d1be2adf", name="epr-17952a.ic8", byteswap=True)
 
-def create_mra_root():
+def create_mra_root(setname):
     mraroot = ET.Element("misterromdescription")
-    ET.SubElement(mraroot, "rbf").text = "Saturn"
-    ET.SubElement(mraroot, "setname").text = "saturnstv"
+    ET.SubElement(mraroot, "rbf").text = "ST-V"
+    ET.SubElement(mraroot, "setname").text = setname
+
     return mraroot
 
 def add_eeprom(mraroot, gamename, zip_files):
@@ -75,15 +87,13 @@ def add_eeprom(mraroot, gamename, zip_files):
     return eeprom_elem
 
 
-
-
-
-
-
-
-
 def create_mra_tree(gameinfo, for_region="US"):
-    mraroot = create_mra_root()
+    global mameroot
+    gamename = gameinfo.attrib['name']
+    mraroot = create_mra_root(gameinfo.attrib['name'])
+    mame_player1 = mameroot.find(f"machine[@name='{gamename}']/input/control")
+    num_buttons = int(mame_player1.attrib["buttons"])
+    add_buttons(mraroot, num_buttons-1)
     zip_names = []
     zip_names.append(f'{gameinfo.attrib['name']}.zip')
     if 'cloneof' in gameinfo.attrib:
