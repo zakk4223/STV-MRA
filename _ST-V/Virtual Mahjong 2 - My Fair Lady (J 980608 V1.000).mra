@@ -1,7 +1,7 @@
 <misterromdescription>
 	<rbf>ST-V</rbf>
 	<setname>myfairld</setname>
-	<buttons names="Button 1,-,-,Start,Service,-,-,-,Test,Coin" />
+	<buttons names="Button 1,Button 2,-,Start,Service,-,-,-,Test,Coin" />
 	<rom index="1" md5="" zip="myfairld.zip" address="0x32000000">
 		<interleave output="64">
 			<part crc="c7cf3a5a" name="myfairld.nv" map="12345678" />

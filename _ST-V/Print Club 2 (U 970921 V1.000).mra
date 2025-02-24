@@ -1,7 +1,7 @@
 <misterromdescription>
 	<rbf>ST-V</rbf>
 	<setname>pclub2</setname>
-	<buttons names="Button 1,Button 2,Button 3,Start,Service,-,-,-,Test,Coin" />
+	<buttons names="Button 1,Button 2,Button 3,Start,Service,Button 4,-,-,Test,Coin" />
 	<rom index="1" md5="" zip="pclub2.zip" address="0x32000000">
 		<interleave output="64">
 			<part crc="00d0f04e" name="pclub2.nv" map="12345678" />

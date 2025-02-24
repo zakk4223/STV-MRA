@@ -93,7 +93,7 @@ def create_mra_tree(gameinfo, for_region="US"):
     mraroot = create_mra_root(gameinfo.attrib['name'])
     mame_player1 = mameroot.find(f"machine[@name='{gamename}']/input/control")
     num_buttons = int(mame_player1.attrib["buttons"])
-    add_buttons(mraroot, num_buttons-1)
+    add_buttons(mraroot, num_buttons)
     zip_names = []
     zip_names.append(f'{gameinfo.attrib['name']}.zip')
     if 'cloneof' in gameinfo.attrib:
