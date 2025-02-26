@@ -1,7 +1,7 @@
 <misterromdescription>
 	<rbf>ST-V</rbf>
 	<setname>vfkids</setname>
-	<buttons names="Button 1,Button 2,Button 3,Start,Service,Button 4,-,-,Test,Coin" />
+	<buttons names="Button 1,Button 2,Button 3,Button 4,-,-,Start,Coin,Service,Test" default="A,B,X,Y,Start,Select,R,L" />
 	<rom index="1" md5="" zip="vfkids.zip" address="0x32000000">
 		<part repeat="0x80">00</part>
 	</rom>

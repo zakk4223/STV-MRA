@@ -1,7 +1,7 @@
 <misterromdescription>
 	<rbf>ST-V</rbf>
 	<setname>ffrevng10</setname>
-	<buttons names="Button 1,Button 2,Button 3,Start,Service,Button 4,Button 5,Button 6,Test,Coin" />
+	<buttons names="Button 1,Button 2,Button 3,Button 4,Button 5,Button 6,Start,Coin,Service,Test" default="A,B,X,Y,L,R,Start,Select" />
 	<rom index="1" md5="" zip="ffrevng10.zip|ffreveng.zip" address="0x32000000">
 		<part repeat="0x80">00</part>
 	</rom>
