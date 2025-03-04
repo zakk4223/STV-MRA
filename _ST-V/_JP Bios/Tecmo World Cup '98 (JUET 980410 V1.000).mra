@@ -2,6 +2,9 @@
 	<rbf>ST-V</rbf>
 	<setname>twcup98</setname>
 	<buttons names="Button 1,Button 2,Button 3,Button 4,-,-,Start,Coin,Service,Test" default="A,B,X,Y,Start,Select,R,L" />
+	<rom index="0">
+		<part>61</part>
+	</rom>
 	<rom index="1" md5="" zip="twcup98.zip" address="0x32000000">
 		<part repeat="0x80">00</part>
 	</rom>

@@ -76,12 +76,24 @@ def add_stv_mode(mraroot, gamename):
     if gamename in ["decathlt", "decathlto"]:
         ET.SubElement(ET.SubElement(mraroot, "rom", index="0"), "part").text = "02"
     if gamename in ["rsgun"]:
-        ET.SubElement(ET.SubElement(mraroot, "rom", index="0"), "part").text = "01"
+        ET.SubElement(ET.SubElement(mraroot, "rom", index="0"), "part").text = "41"
+    if gamename in ["astrass"]:
+        ET.SubElement(ET.SubElement(mraroot, "rom", index="0"), "part").text = "11"
+    if gamename in ["elandore"]:
+        ET.SubElement(ET.SubElement(mraroot, "rom", index="0"), "part").text = "21"
+    if gamename in ["ffreveng"]:
+        ET.SubElement(ET.SubElement(mraroot, "rom", index="0"), "part").text = "31"
+    if gamename in ["sss"]:
+        ET.SubElement(ET.SubElement(mraroot, "rom", index="0"), "part").text = "51"
+    if gamename in ["twcup98", "twsoc98"]:
+        ET.SubElement(ET.SubElement(mraroot, "rom", index="0"), "part").text = "61"
 
 def add_bios(mraroot, region="US"):
     bios_elem = add_rom(mraroot, romindex="2", zipfiles=["stvbios.zip"], address="0x30000000")
     if region == "JP":
         add_rom_part(bios_elem, crc="f688ae60", name="epr-23603.ic8", byteswap=True)
+    elif region == "EU":
+        add_rom_part(bios_elem, crc="f7722da3", name="epr-17954a.ic8", byteswap=True)
     else:
         add_rom_part(bios_elem, crc="d1be2adf", name="epr-17952a.ic8", byteswap=True)
 
@@ -195,7 +207,10 @@ for gameinfo in hashroot.iter('software'):
     if region_codes == 'J':
         create_mra_tree(gameinfo, for_region="JP").write(mra_filename)
     else:
-        create_mra_tree(gameinfo, for_region="US").write(mra_filename)
+        if 'U' in region_codes:
+            create_mra_tree(gameinfo, for_region="US").write(mra_filename)
+        else:
+            create_mra_tree(gameinfo, for_region="EU").write(mra_filename)
         if 'J' in region_codes:
             if not os.path.isdir("_JP Bios"):
                 os.makedirs("_JP Bios")
