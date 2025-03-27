@@ -63,11 +63,11 @@ license:CC0-1.0
 				<rom name="gfx4.u12" size="0x400000" crc="52d95242" sha1="b554a95933c2be4c72fb4226d3bc4775695da2c1" offset="0x1400000" loadflag="load16_word_swap"/>
 				<rom name="gfx5.u15" size="0x400000" crc="e201f830" sha1="5aa22fcc8f2e153d1abc3aa4050c594b3942ee67" offset="0x1800000" loadflag="load16_word_swap"/>
 				<rom name="gfx6.u18" size="0x400000" crc="c6b381a3" sha1="46431f1e47c084a0bf85535d35af27471653b008" offset="0x1c00000" loadflag="load16_word_swap"/>
-				<rom name="350snda1.u52" size="0x080000" crc="9027e7a0" sha1="678df530838b078964a044ce734776f391654e6c" offset="0x000000" loadflag="load16_word_swap"/>
-				<rom name="snd0.u48" size="0x200000" crc="02b1927c" sha1="08b21d8b31b0f15c59fb5bb7eaf425e6fe04f7b5" offset="0x000000" loadflag="load16_word_swap"/>
-				<rom name="snd1.u49" size="0x200000" crc="58b18eda" sha1="7f3105fe04d9c0cdfd76e3323f623a4d0f7dad06" offset="0x200000" loadflag="load16_word_swap"/>
-				<rom name="snd2.u50" size="0x200000" crc="51d626d6" sha1="0e68b79dcb653dcba48121ca2d4f692f90afa85e" offset="0x400000" loadflag="load16_word_swap"/>
-				<rom name="snd3.u51" size="0x200000" crc="31af26ae" sha1="2c9f4c078afec55964b5c2a4d00f5c43f2661a04" offset="0x600000" loadflag="load16_word_swap"/>
+				<rom name="350snda1.u52" size="0x080000" crc="9027e7a0" sha1="678df530838b078964a044ce734776f391654e6c" offset="0x2000000" loadflag="load16_word_swap"/>
+				<rom name="snd0.u48" size="0x200000" crc="02b1927c" sha1="08b21d8b31b0f15c59fb5bb7eaf425e6fe04f7b5" offset="0x2400000" loadflag="load16_word_swap"/>
+				<rom name="snd1.u49" size="0x200000" crc="58b18eda" sha1="7f3105fe04d9c0cdfd76e3323f623a4d0f7dad06" offset="0x2600000" loadflag="load16_word_swap"/>
+				<rom name="snd2.u50" size="0x200000" crc="51d626d6" sha1="0e68b79dcb653dcba48121ca2d4f692f90afa85e" offset="0x2800000" loadflag="load16_word_swap"/>
+				<rom name="snd3.u51" size="0x200000" crc="31af26ae" sha1="2c9f4c078afec55964b5c2a4d00f5c43f2661a04" offset="0x2a00000" loadflag="load16_word_swap"/>
 			</dataarea>
 		</part>
 	</software>

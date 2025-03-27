@@ -87,6 +87,8 @@ def add_stv_mode(mraroot, gamename):
         ET.SubElement(ET.SubElement(mraroot, "rom", index="0"), "part").text = "51"
     if gamename in ["twcup98", "twsoc98"]:
         ET.SubElement(ET.SubElement(mraroot, "rom", index="0"), "part").text = "61"
+    if gamename in ["batmanfr"]:
+        ET.SubElement(ET.SubElement(mraroot, "rom", index="0"), "part").text = "3"
 
 def add_bios(mraroot, region="US"):
     bios_elem = add_rom(mraroot, romindex="2", zipfiles=["stvbios.zip"], address="0x30000000")
@@ -146,8 +148,7 @@ def create_mra_tree(gameinfo, for_region="US"):
             rominfo = last_loaded_rom_node
             if 'loadflag' in rominfo.attrib:
                 del rominfo.attrib['loadflag']
-        #batman has sound roms in the stv.xml, without designating a sound cpu region. Just skip anything with 'snd' in it 
-        if 'snd' not in rominfo.attrib['name'] and 'eeprom' not in rominfo.attrib['name']:
+        if 'eeprom' not in rominfo.attrib['name']:
             offset_map[rom_offset] = deepcopy(rominfo)  
             last_loaded_rom_node = rominfo
     rom_inter_node = None
