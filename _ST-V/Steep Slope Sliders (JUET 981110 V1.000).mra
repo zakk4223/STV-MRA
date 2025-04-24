@@ -39,4 +39,5 @@
 			<part crc="efb2d271" name="mpr21493.6" map="12345678" />
 		</interleave>
 	</rom>
+	<nvram index="4" size="65664" />
 </misterromdescription>

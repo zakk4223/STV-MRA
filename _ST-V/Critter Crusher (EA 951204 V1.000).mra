@@ -27,4 +27,5 @@
 			<part crc="feae5867" name="mpr-18788.ic9" map="12345678" />
 		</interleave>
 	</rom>
+	<nvram index="4" size="65664" />
 </misterromdescription>

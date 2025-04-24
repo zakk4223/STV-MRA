@@ -30,4 +30,5 @@
 			<part crc="3914b805" name="th-e-5.ic5" map="12345678" />
 		</interleave>
 	</rom>
+	<nvram index="4" size="65664" />
 </misterromdescription>

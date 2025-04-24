@@ -45,4 +45,5 @@
 			<part crc="f77f9e24" name="ic25" map="12345678" />
 		</interleave>
 	</rom>
+	<nvram index="4" size="65664" />
 </misterromdescription>

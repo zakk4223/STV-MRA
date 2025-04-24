@@ -22,4 +22,5 @@
 			<part crc="74f6e6b8" name="mpr19555.3" map="12345678" />
 		</interleave>
 	</rom>
+	<nvram index="4" size="65664" />
 </misterromdescription>

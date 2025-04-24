@@ -37,4 +37,5 @@
 			<part crc="9ba1e7b1" name="mpr17767.1" map="12345678" />
 		</interleave>
 	</rom>
+	<nvram index="4" size="65664" />
 </misterromdescription>

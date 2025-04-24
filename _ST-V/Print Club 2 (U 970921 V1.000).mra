@@ -30,4 +30,5 @@
 			<part crc="8d89877e" name="ic30" map="12345678" />
 		</interleave>
 	</rom>
+	<nvram index="4" size="65664" />
 </misterromdescription>

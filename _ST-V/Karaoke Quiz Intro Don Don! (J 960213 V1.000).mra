@@ -40,4 +40,5 @@
 			<part crc="580ecb83" name="mpr18938.1" map="12345678" />
 		</interleave>
 	</rom>
+	<nvram index="4" size="65664" />
 </misterromdescription>

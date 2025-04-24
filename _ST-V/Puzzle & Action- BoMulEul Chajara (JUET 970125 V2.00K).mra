@@ -46,4 +46,5 @@
 			<part crc="5ece1d5c" name="bom210-13.ic5" map="21436587" />
 		</interleave>
 	</rom>
+	<nvram index="4" size="65664" />
 </misterromdescription>

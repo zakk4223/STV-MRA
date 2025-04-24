@@ -116,6 +116,10 @@ def add_eeprom(mraroot, gamename, zip_files):
         add_zero_bytes(eeprom_elem, 128)
     return eeprom_elem
 
+def add_nvram(mraroot, index="4", size="65664"):
+    ET.SubElement(mraroot, "nvram", index=index, size=size)
+
+
 
 def create_mra_tree(gameinfo, for_region="US"):
     global mameroot
@@ -190,6 +194,7 @@ def create_mra_tree(gameinfo, for_region="US"):
             current_offset = current_offset + rom_size
 
 
+    add_nvram(mraroot)
     mratree = ET.ElementTree(mraroot)
     ET.indent(mratree, space="\t", level=0)
     return mratree
