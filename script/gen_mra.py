@@ -130,9 +130,9 @@ def create_mra_tree(gameinfo, for_region="US"):
     add_buttons(mraroot, num_buttons)
     add_stv_mode(mraroot, gamename)
     zip_names = []
-    zip_names.append(f'{gameinfo.attrib['name']}.zip')
+    zip_names.append(f"{gameinfo.attrib['name']}.zip")
     if 'cloneof' in gameinfo.attrib:
-        zip_names.append(f'{gameinfo.attrib['cloneof']}.zip')
+        zip_names.append(f"{gameinfo.attrib['cloneof']}.zip")
     add_eeprom(mraroot, gamename=gameinfo.attrib['name'], zip_files=zip_names)
     add_bios(mraroot, region=for_region)
     rom_root = add_rom(mraroot, romindex="3", zipfiles=zip_names, address="0x34000000")
@@ -199,6 +199,10 @@ def create_mra_tree(gameinfo, for_region="US"):
     ET.indent(mratree, space="\t", level=0)
     return mratree
 
+def write_mra_tree(mra_tree, mra_filename):
+    with open(mra_filename, 'w', newline='\n') as f:
+        mra_tree.write(f, encoding='unicode')
+
 region_re = re.compile(r'.*\(([A-Z]+)\s+[0-9]')
 
 for gameinfo in hashroot.iter('software'):
@@ -211,16 +215,16 @@ for gameinfo in hashroot.iter('software'):
     mra_filename = mra_filename.replace(':', '-')
     
     if region_codes == 'J':
-        create_mra_tree(gameinfo, for_region="JP").write(mra_filename)
+        write_mra_tree(create_mra_tree(gameinfo, for_region="JP"), mra_filename)
     else:
         if 'U' in region_codes:
-            create_mra_tree(gameinfo, for_region="US").write(mra_filename)
+            write_mra_tree(create_mra_tree(gameinfo, for_region="US"), mra_filename)
         else:
-            create_mra_tree(gameinfo, for_region="EU").write(mra_filename)
+            write_mra_tree(create_mra_tree(gameinfo, for_region="EU"), mra_filename)
         if 'J' in region_codes:
             if not os.path.isdir("_JP Bios"):
                 os.makedirs("_JP Bios")
-            create_mra_tree(gameinfo, for_region="JP").write(os.path.join("_JP Bios", mra_filename))
+            write_mra_tree(create_mra_tree(gameinfo, for_region="JP"), os.path.join("_JP Bios", mra_filename))
 
 
 
